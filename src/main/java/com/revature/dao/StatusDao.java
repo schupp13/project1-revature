@@ -26,9 +26,9 @@ public class StatusDao implements ContractDao<Status, Integer>{
 		return null;
 	}
 
-	public Status insert(Status t) {
+	public boolean insert(Status t) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 }

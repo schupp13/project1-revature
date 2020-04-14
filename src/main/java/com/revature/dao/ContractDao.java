@@ -8,6 +8,6 @@ import java.util.List;
 		T findById(I id);
 		T findByAString(String s);
 		T updateByID(T t);
-		T insert(T t);
+		boolean insert(T t);
 	
 	};

@@ -26,9 +26,9 @@ public class RoleDao implements ContractDao<Role, Integer>{
 		return null;
 	}
 
-	public Role insert(Role t) {
+	public boolean insert(Role t) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 }

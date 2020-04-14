@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERS-Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/landing.css" type="text/css" />
+</head>
+
+<body>
+  <div class="landing-container ">
+
+    <div class="card bg-light text-dark">
+      <h3 class="one">ERS Login</h3>
+      <div class="card-body">
+        <form action="./login.json" method="post">
+          <div class="form-group">
+            <label for="email">Username:</label>
+            <input type="text" class="form-control" placeholder="Enter username" id="username" name="username">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" placeholder="Enter password" id="pwd" name="password">
+          </div>
+          <button type="submit" class="btn btn-secondary">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

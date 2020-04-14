@@ -1,0 +1,46 @@
+body {}
+
+.landing-container {
+  background-image: linear-gradient(to top right, #0ac78b, #03588c);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  width: 25vw;
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes example {
+  from {
+    top: 50vh;
+    background-color: #08B18B;
+  }
+
+  to {
+    top: 0px;
+    background-color: white;
+  }
+}
+
+h3 {
+  padding: 1rem;
+  text-align: center;
+
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    width: 70vw;
+  }
+}

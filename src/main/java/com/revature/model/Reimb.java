@@ -11,9 +11,14 @@ public class Reimb {
 	private String resolver;
 	private String status;
 	private String type;
+	private int authorId;
+	private int resolverId;
+	private int typeId;
 	
 	
-	public Reimb(int id, float amount, String submitted, String resolved, String description, String receipt,
+
+
+	public Reimb(int id, int authorId, int resolverId, int typeId, float amount, String submitted, String resolved, String description, String receipt,
 			String author, String resolver, String status, String type) {
 		super();
 		this.id = id;
@@ -26,17 +31,64 @@ public class Reimb {
 		this.resolver = resolver;
 		this.status = status;
 		this.type = type;
+		this.authorId = authorId;
+		this.resolverId = resolverId;
+		this.typeId = typeId;
 	}
+	
+
+
+
+	public Reimb( int authorId, int typeId, float amount, String description ) {
+		super();
+		this.amount = amount;
+		this.description = description;
+		
+		this.authorId = authorId;
+		this.typeId = typeId;
+	}
+	
+	
 	public Reimb() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Override
-	public String toString() {
-		return "{\"id\": " + id + ", \"amount\": " + amount + ", \"submitted\": \"" + submitted + "\", \"resolved\": \"" + resolved
-				+ "\", \"description\":\"" + description + "\", \"receipt\": \"" + receipt + "\", \"author\": \"" + author + "\", \"resolver\":\""
-				+ resolver + "\", \"status\": \"" + status + "\", \"type\": \"" + type + "\"}";
+//	@Override
+//	public String toString() {
+//		return "{\"id\": " + id + ", \"amount\": " + amount + ", \"submitted\": \"" + submitted + "\", \"resolved\": \"" + resolved
+//				+ "\", \"description\":\"" + description + "\", \"receipt\": \"" + receipt + "\", \"author\": \"" + author + "\", \"resolver\":\""
+//				+ resolver + "\", \"status\": \"" + status + "\", \"type\": \"" + type + "\"}";
+//	}
+//	
+	
+	
+	public int getTypeId() {
+		return typeId;
 	}
+
+
+	public void setTypeId(int typeId) {
+		this.typeId = typeId;
+	}  
+	public int getAuthorId() {
+		return authorId;
+	}
+
+
+	public void setAuthorId(int authorId) {
+		this.authorId = authorId;
+	}
+
+
+	public int getResolverId() {
+		return resolverId;
+	}
+
+
+	public void setResolverId(int resolverId) {
+		this.resolverId = resolverId;
+	}
+
 	public int getId() {
 		return id;
 	}
