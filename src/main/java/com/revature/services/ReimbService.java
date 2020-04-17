@@ -12,12 +12,16 @@ public class ReimbService {
 	
 	public ReimbService(){
 		super();
-		ReimbDao rd = new ReimbDao();
+		 rd = new ReimbDao();
 	}
 	
-	
-	public List<Reimb> getAllCustomers(){	
-		return  rd.findAll();
+	/**
+	 * 
+	 * @param id 
+	 * @return
+	 */
+	public List<Reimb> findReimbByAuthorId(int id){	
+		return  rd.findAllByAuthorId(id);
 	}
 	
 	public Reimb getById(int id) {
@@ -29,6 +33,17 @@ public class ReimbService {
 		return rd.insert(reimb);
 		
 	}
+
+	public List<Reimb> getAllReimb() {
+		return rd.findAll();
+	}
+
+	public boolean updateStatus(int id, int status, int resolver) {
+		
+		return rd.updateStatus(id, status, resolver);
+	}
+
+
 	
 	
 	

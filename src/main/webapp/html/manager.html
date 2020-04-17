@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/user.css" />
+    <link rel="stylesheet" type="text/css" href="css/manager.css" />
+    <script
+      src="https://kit.fontawesome.com/d4ff99328b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+
+  <body>
+    <!-- Grey with black text -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <!-- Brand/logo -->
+      <a class="navbar-brand" href="#">ERS</a>
+
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./" id="logout">Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h2 class="text-center align-center m-2">Management Page</h2>
+      <div class="row">
+        <div class="col-sm-6 d-flex justify-content-cener align-items-center">
+          <div class="card" style="width: 80%;">
+            <div class="card-body">
+              <h4 class="card-title" id="fullName"></h4>
+              <p class="card-text" id="username"></p>
+              <p class="card-text" id="userId"></p>
+              <p class="card-text" id="userEmail"></p>
+              <p class="card-text" id="userRole"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <canvas id="myData" width="600" height="400"></canvas>
+        </div>
+
+        <div class="col-sm-12">
+          <h4 id="myTableHeader">Reimbursement Request</h4>
+          <div class="form-group">
+            <label for="type">Employee list:</label>
+            <select class="form-control" id="userOptions" name="userId">
+              <option value="all">All</option>
+            </select>
+          </div>
+          <table class="table table-hover table-sm">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Author</th>
+                <th>Status</th>
+                <th>Amount</th>
+                <th>Type</th>
+                <th>Submitted</th>
+                <th>Resolved</th>
+                <th>Description</th>
+                <th>Approved By</th>
+                <th>Approve</th>
+                <th>Deny</th>
+              </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/getManager.js"></script>
+  </body>
+</html>
